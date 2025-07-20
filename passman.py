@@ -95,7 +95,8 @@ def mainfun():
                     data=json.load(f)
                     if data:
                         for i,j in data.items():
-                            print(f"  > {i} ({j['user']})")
+                            for k in j:
+                                print(f"  > {i} ({k['user']})")
                     else:
                         print("No files saved yet")
             except FileNotFoundError:
